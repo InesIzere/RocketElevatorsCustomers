@@ -74,7 +74,7 @@
             },
             "MySql.Data.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.22, )"
+              "version": "[3.1.10, )"
             },
             "MySqlConnector": {
               "target": "Package",
