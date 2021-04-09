@@ -6967,11 +6967,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\izere\\Shimwe-RestAPI\\Rocket-Elevators-Rest-API.csproj",
+      "projectUniqueName": "C:\\Users\\izere\\OneDrive\\Desktop\\RocketElevatorsCustomers\\Rocket-Elevators-Rest-API.csproj",
       "projectName": "Rocket-Elevators-Rest-API",
-      "projectPath": "c:\\Users\\izere\\Shimwe-RestAPI\\Rocket-Elevators-Rest-API.csproj",
+      "projectPath": "C:\\Users\\izere\\OneDrive\\Desktop\\RocketElevatorsCustomers\\Rocket-Elevators-Rest-API.csproj",
       "packagesPath": "C:\\Users\\izere\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\izere\\Shimwe-RestAPI\\obj\\",
+      "outputPath": "C:\\Users\\izere\\OneDrive\\Desktop\\RocketElevatorsCustomers\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KUc9yUnBv5UJjv8kKWAWW8FJOd+BYdwwfs57Y3pCR0zofQxDnm+nhYiYnSSBwRD0riDbkuU1Nd8+6NRK2PAHyg==",
+  "dgSpecHash": "GxUUP4HLLkv4pw4ezApa8URPezkqJAktNiZ9wZ8CLTYOfLxTnABamLreZA1xGeDhpvS1TmSYrLcBflswcVAnCg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\izere\\Shimwe-RestAPI\\Rocket-Elevators-Rest-API.csproj",
+  "projectFilePath": "C:\\Users\\izere\\OneDrive\\Desktop\\RocketElevatorsCustomers\\Rocket-Elevators-Rest-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\izere\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\izere\\.nuget\\packages\\google.protobuf\\3.11.4\\google.protobuf.3.11.4.nupkg.sha512",
