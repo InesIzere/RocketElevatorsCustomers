@@ -75,16 +75,55 @@ namespace Rocket_Elevators_Rest_API.Models.Controllers
 
 
 
-        [HttpPost]
-        public async Task<ActionResult<Customers>> PostCustomers(Customers Customers)
-        {
-            _context.Customers.Add(Customers);
-            await _context.SaveChangesAsync();
+        // [HttpPost]
+        // public async Task<ActionResult<Customers>> PostCustomers(Customers Customers)
+        // {
+        //     _context.Customers.Add(Customers);
+        //     await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetCustomers", new { id = Customers.Id }, Customers);
+        //     return CreatedAtAction("GetCustomers", new { id = Customers.Id }, Customers);
+        // }
+        [HttpPost("update")]
+        public async Task<IActionResult> PutmodifyCustomer(Customers cust)
+        {
+
+            if (cust == null)
+            {
+                return BadRequest();
+            }
+            var cus = await _context.Customers.FindAsync(cust.Id);
+
+            cus.FullNameCompanyContact = cust.FullNameCompanyContact;
+            cus.CompanyContactPhone = cust.CompanyContactPhone;
+            cus.CompanyContactEmail = cust.CompanyContactEmail;
+            cus.TechnicalAuthorityEmail = cust.TechnicalAuthorityEmail;
+
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!customersExist(cus.Id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
 
-   
+        private bool customersExist(long id)
+        {
+            return _context.Customers.Any(e => e.Id == id);
+           
+        }
+
         [HttpDelete("{id}")]
         public async Task<ActionResult<Customers>> DeleteCustomers(long id, string Temail)
         {
@@ -106,11 +145,7 @@ namespace Rocket_Elevators_Rest_API.Models.Controllers
             return Customers;
         }
 
-        private bool CustomersExists(long id)
-        {
-            return _context.Customers.Any(e => e.Id == id);
-           
-        }
+        
 
          private bool CustomersemailExists(string Temail)
         {

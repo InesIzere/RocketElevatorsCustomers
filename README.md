@@ -1,20 +1,23 @@
 README.md
-# Consolidation Week #
-****************************************************************
- For this week rest api Api.we have created endpoint for intervetion table.And you can have all the intervention.[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/).</br>
- ![](14.PNG)
-   GET for Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/pending).</br>
 
-![](15.PNG) 
-  PUT for Changing the status of the intervention(example intervention 3) request to "InProgress" and add a start date and time (Timestamp).
-  [url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/StartDate/3).</br>
-  ![](16.PNG) 
-  PUT for Changing the status (example of intervention 1) of the request for action to "Completed" and add an end date and time (Timestamp).[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/EndDate/1).</br>
-  ![](17.PNG) 
+# Consolidation Week
 
-  For other specification please check my restapi url in postman. https://shimwerestapi.azurewebsites.net/api/interventions
+---
 
-  # Week 8:Rest APIs #
+For this week rest api Api.we have created endpoint for intervetion table.And you can have all the intervention.[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/).</br>
+![](14.PNG)
+GET for Returns all fields of all Service Request records that do not have a start date and are in "Pending" status.[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/pending).</br>
+
+![](15.PNG)
+PUT for Changing the status of the intervention(example intervention 3) request to "InProgress" and add a start date and time (Timestamp).
+[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/StartDate/3).</br>
+![](16.PNG)
+PUT for Changing the status (example of intervention 1) of the request for action to "Completed" and add an end date and time (Timestamp).[url to verify in postman](https://shimwerestapi.azurewebsites.net/api/interventions/EndDate/1).</br>
+![](17.PNG)
+
+For other specification please check my restapi url in postman. https://shimwerestapi.azurewebsites.net/api/interventions
+
+# Week 8:Rest APIs
 
 In this project we Created Rest Apis for Rocket Elevators. and the link for our differents Apis are below and you can test it in Postman here is example of how u can access our api
 
@@ -50,7 +53,8 @@ We Scaffolded our The entities which are the Models folder That we had in Mysql 
     public string Information { get; set; }
     public string Notes { get; set; }
     public string BatteryType { get; set; }
-We have a database context(rocketelevators_developmentContext) is the main class that coordinates Entity Framework functionality for a data model.and for our Batteries Class, its relation is: modelBuilder.Entity(entity => { entity.ToTable("batteries");
+
+We have a database context(InesIzereContext) is the main class that coordinates Entity Framework functionality for a data model.and for our Batteries Class, its relation is: modelBuilder.Entity(entity => { entity.ToTable("batteries");
 
             entity.HasIndex(e => e.BuildingId)
                 .HasName("index_batteries_on_building_id");
@@ -66,7 +70,8 @@ We have a database context(rocketelevators_developmentContext) is the main class
             entity.Property(e => e.BuildingId)
                 .HasColumnName("building_id")
                 .HasColumnType("bigint(20)");
-We use difference Controllers to expose Async API Endpoints for CRUD operations. For example in Batteries controller, [HttpGet("{id}")] public async Task<ActionResult> GetBattery(long id) { var battery = await _context.Batteries.FindAsync(id);
+
+We use difference Controllers to expose Async API Endpoints for CRUD operations. For example in Batteries controller, [HttpGet("{id}")] public async Task<ActionResult> GetBattery(long id) { var battery = await \_context.Batteries.FindAsync(id);
 
         if (battery == null)
         {
@@ -75,4 +80,5 @@ We use difference Controllers to expose Async API Endpoints for CRUD operations.
 
         return battery;
     }
+
 And we can see the results our our request in Postman.

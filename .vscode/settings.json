@@ -1,4 +1,4 @@
 {
-  "appService.defaultWebAppToDeploy": "/subscriptions/82dc5813-759e-45ed-bd19-445b0cc890b7/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/shimweRestApi",
-  "appService.deploySubpath": "publish"
+  "appService.deploySubpath": "publish",
+  "appService.defaultWebAppToDeploy": "/subscriptions/82dc5813-759e-45ed-bd19-445b0cc890b7/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/custumerportal"
 }

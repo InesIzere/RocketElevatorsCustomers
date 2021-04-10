@@ -12,7 +12,7 @@ using Pomelo.EntityFrameworkCore.MySql;
 namespace Rocket_Elevators_Rest_API.Models.Controllers
 {
    [Route("api/[controller]")]
-    [ApiController]
+     [ApiController]
     public class ColumnsController : ControllerBase
     {
         private readonly shimwe_mysqlContext _context;

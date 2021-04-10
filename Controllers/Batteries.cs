@@ -13,7 +13,7 @@ using Pomelo.EntityFrameworkCore.MySql;
 namespace Rocket_Elevators_Rest_API.Models.Controllers
 {   
     
-[Route("api/[controller]")]
+  [Route("api/[controller]")]
     [ApiController]   
     //[EnableCors("AllowOrigin")]    
     public class BatteriesController : ControllerBase
