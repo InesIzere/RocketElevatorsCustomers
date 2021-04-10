@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'RocketElevatorsCustomers'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_5f2967d7d4b5443f9c6b35d1feb515a9 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_db8089c1bbee4fc3a606d43c0acaa9a7 }}
         package: .
